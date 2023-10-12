@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<style type="text/css">
+		/*#C0C0C0*/
+		@font-face {
+	    font-family: 'DOSMyungjo';
+	    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_eight@1.0/DOSMyungjo.woff') format('woff');
+	    font-weight: normal;
+	    font-style: normal;
+		}
+		body{
+			background-color:white; 
+			margin:0; padding:0; 
+			overflow: hidden; 
+			font-family: 'DOSMyungjo'; 
+			font-size:1.6vw; 
+			line-height: 2.5vw
+		}
+		main{
+			width:100%; 
+			position:absolute; 
+			text-align:center;
+		}
+		.www{
+			position:absolute;
+			width:100%; 
+			top:0px; 
+			z-index:10;
+		}
+		.eye {
+		  	width: 44px;
+		  	height: 20px;
+		  	background: white;
+		  	display: inline-block;
+		  	margin: 0 4.3px;
+		  	border-radius: 50%;
+		  	position: relative;
+		  	overflow: hidden;
+		  	margin-top: 9.6%;
+		  	z-index: 100;
+		}
+		.eye:hover{background-color:red;}
+		.ball {
+		  	width: 13px;
+		  	height: 13px;
+		  	background: black;
+		  	position: absolute;
+		  	top: 50%;
+		  	left: 50%;
+		  	transform: translate(-50%, -50%);
+		  	border-radius: 50%;
+		  	z-index: 100;
+		}
+		.eyeleft{margin-left:96px;}
+		.eyeleft2{margin-left:166px;}
+		section{
+			margin:0;
+    		margin:110px 0px; 
+    		position:relative;
+    		}
+    	.container{display: flex; height: 100vh;}
+		.left, .right{padding: 20px;}
+		.left {width:57.3%; background-image:url("https://media4.giphy.com/media/3o7aD5R4aIdLwOP0Os/giphy.gif?cid=ecf05e474n5qc0mz7itq21y7nyeng62ydomrm35cj5wc6li4&ep=v1_gifs_search&rid=giphy.gif&ct=g");background-size: cover;}
+		.right {
+			width:42.7%;
+		    background-color: #C0C0C0;
+		    margin-top:-196px; 
+		    text-align:center;
+		    overflow-y: scroll; 
+		}
+		.ticker{position: absolute;overflow: hidden; z-index: 100;}
+		#ticker1{
+			right: 0px;top:44px;
+			width: 43.06%;
+			height: 3rem;
+			font-size: 2rem;
+			line-height: 3rem;
+			background:green;
+			color: white;
+		}
+		.imageContainer{position:absolute; z-index:1000;}
+		button{
+			display:block; 
+			margin-bottom:43px; 
+			margin-top:10px;
+			font-family: 'DOSMyungjo';}
+		#image1{margin-left:150px; position:absolute; margin-top: -50px;}
+		#vpn {
+		    position: fixed;
+		    left: 0;
+		    top: 0;
+		    transform: translate(0, 0) rotate(0deg);
+		    width: 50px; 
+		    transform-origin: center center;
+		    z-index: 10000;}
+		#vpn:hover{mix-blend-mode: luminosity; cursor:pointer;}
+		.sorry{
+			margin-top:-43%; 
+			width:540px; 
+			text-align: center;
+			margin-left: 150px; 
+			word-break: keep-all;
+			color: black;
+			line-height: 2vw;
+		}
+
+		iframe{margin-top: -15px;}
+	</style>
+</head>
+<body>
+	<div class="main">
+		<img id="vpn" src="vpn.png" alt="vpn">
+		<div id="imageContainer"></div>
+		<img src="www.png" class="www">
+		<div class="eye eyeleft">
+			<div class="ball"></div>
+		</div>
+		<div class="eye">
+			<div class="ball"></div>
+		</div>
+		<div class="eye eyeleft2">
+			<div class="ball"></div>
+		</div>
+		<div class="eye">
+			<div class="ball"></div>
+		</div>
+		<div class="eye eyeleft2">
+			<div class="ball"></div>
+		</div>
+		<div class="eye">
+			<div class="ball"></div>
+		</div>
+		<div class="ticker" id="ticker1" data-speed="1" data-gap="480"><p><span>&nbsp;&nbsp;<오늘의 처형人>&nbsp;&nbsp;리봉봉(44세. 여) 백두식(57세. 남) 김두위(22세. 남) 송춘춘(38세. 여) 리회춘(66세. 여) 판빙구(50세 .남) 림두심(21세. 여)</span></p></div>
+		<section>
+			<div class="container">
+				<div class="left">
+					<button id="button1">1</button>
+					<div id="image1"></div>
+					<button id="button2">2</button>
+					<div id="image2"></div>
+					<button id="button3">3</button>
+					<div id="image3"></div>
+					<button id="button4">4</button>
+					<div id="image4"></div>
+					<button id="button5">5</button>
+					<div id="image5"></div>
+					<button id="button6">6</button>
+					<div id="image6"></div>
+					<p class="sorry"><mark>1. 뉴스 밑에 텍스트(앵커 자막) 페이드인 할 예정이구요<br>2. 버튼 클릭하면 이미지나 텍스트가 커서 따라서 생성되게 할 예정입니다..<br>3. 날라다니는 로켓(vpn)클릭하면 화면에 있던 컨텐츠들 다 바뀌고 김정은 밈들 gif로 나오고... <br>4.여러가지 더 추가해서 만들어 오겠습니다ㅠㅠ....</mark></p>
+					
+				</div>
+				<div class="right">
+					<p>
+						<iframe width="560" height="315" src="https://www.youtube.com/embed/eyX5VWzeKPM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+					</p>
+				</div>
+			</div>
+		</section>
+	</div>
+	
+	<script type="text/javascript">
+	
+	//눈
+	const eyeballs = document.querySelectorAll(".ball");
+
+	document.onmousemove = (event) => {
+	    const x = event.clientX * 100 / window.innerWidth + "%";
+	    const y = event.clientY * 100 / window.innerHeight + "%";
+	    
+	    for (const eyeball of eyeballs) {
+	      eyeball.style.left = x;
+	      eyeball.style.top = y;
+	      eyeball.style.transform = "translate(-" + x + ", -" + y + ")";
+	    }
+	 }
+
+	//흐르는 텍스트
+	bhTicker("ticker",2);
+
+		function bhTicker(cl,speed) {
+			let t = document.getElementsByClassName(cl);
+			let ta = []; let ts=[]; let tg=[]; let tw=[];
+			let container,mover,text,textWidth;
+
+			for(let i=0; i<t.length; i++){
+				container = t[i];
+				mover = container.getElementsByTagName("p").item(0);
+				text = mover.getElementsByTagName("span").item(0);
+
+				
+				mover.style.position = "absolute";
+				mover.style.margin = "0 0 0 0";
+				mover.style.left = "0px";
+				mover.leftPosition = 0;
+				mover.style.width = text.childNodes.item(0).length + "em";	
+				textWidth = text.offsetWidth;
+
+				let speed2 = t[i].dataset.speed;
+				if (textWidth > container.offsetWidth) {
+					if(speed2 == 1){speed2 = 2};
+					mover.style.width = textWidth * speed2 + "px";
+					
+					for(let k=0;k<speed2;k++){
+						mover.innerHTML += mover.innerHTML;	
+					}
+				}
+
+				tw.push(textWidth);
+				tg.push(t[i].dataset.gap);
+				ts.push(t[i].dataset.speed);
+				ta.push(mover);
+			}
+
+			let tickerAction = function() {
+				for(let j=0;j<ta.length;j++){
+					let speed = parseInt(ts[j]);
+					let gap = parseInt(tg[j]);
+					let tw2 = tw[j];
+
+					if (ta[j].leftPosition * -speed > tw2*speed) {
+						ta[j].leftPosition = -speed;
+					} else {
+						ta[j].leftPosition -= speed;
+					}
+
+					ta[j].style.left = (-gap + ta[j].leftPosition) + "px";
+				}
+				window.requestAnimationFrame(tickerAction);
+			};
+			tickerAction();
+		}
+		//버튼1클릭
+
+		document.addEventListener("DOMContentLoaded", function () {
+		    const generateButton = document.getElementById("button1");
+		    const imageContainer = document.getElementById("image1");
+		    const sorryElement = document.querySelector(".sorry");
+
+		    generateButton.addEventListener("click", function () {
+		        const img = document.createElement("img");
+		        img.src = "https://img.buzzfeed.com/buzzfeed-static/static/2014-05/enhanced/webdr02/19/17/anigif_enhanced-17137-1400536446-12.gif";
+		        img.alt = "img";
+		        imageContainer.innerHTML = ""; 
+		        imageContainer.appendChild(img);
+		    });
+
+
+		    for (let i = 2; i <= 6; i++) {
+		        const hideButton = document.getElementById("button" + i);
+
+		        hideButton.addEventListener("click", function () {
+		            const img = imageContainer.querySelector("img");
+		            if (img) {
+		                img.style.display = "none";
+		            }
+		            const sorryElement = document.querySelector(".sorry");
+            sorryElement.style.display = "none";
+		        });
+		    }
+		    //버튼2클릭
+		    const hideButton2 = document.getElementById("button2");
+		    hideButton2.addEventListener("click", function () {
+		        const img = document.createElement("img");
+		        img.src = "https://media.tenor.com/Kq4BYYD-7YAAAAAd/korea-cheerleader.gif"; 
+		        img.alt = "img";
+		        imageContainer.innerHTML = ""; 
+		        imageContainer.appendChild(img);
+		        img.style.marginLeft="-30px";
+		        img.style.marginTop="-10px";
+		    });
+		    //버튼3클릭
+		    const hideButton3 = document.getElementById("button3");
+		    hideButton3.addEventListener("click", function () {
+		        const img = document.createElement("img");
+		        img.src = "https://t1.daumcdn.net/thumb/R720x0/?fname=http://t1.daumcdn.net/brunch/service/user/3aKj/image/7_7KDgRD_5X2bay4A3IqtzGSp9g.gif";
+		        img.alt = "img";
+		        imageContainer.innerHTML = ""; 
+		        imageContainer.appendChild(img);
+		        img.style.width="640px";
+		        img.style.marginLeft="-30px";
+		        img.style.marginTop="-12px";
+		    });
+		    //버튼4클릭
+		    const hideButton4 = document.getElementById("button4");
+		    hideButton4.addEventListener("click", function () {
+		        const img = document.createElement("img");
+		        img.src = "https://i.pinimg.com/originals/22/82/f6/2282f6435b9c13c9b35a5482aa0e43e4.gif";
+		        img.alt = "img";
+		        imageContainer.innerHTML = ""; 
+		        imageContainer.appendChild(img);
+		        img.style.marginLeft="60px";
+		        img.style.marginTop="-18px";
+		        img.style.width="430px";
+		    });
+		    //버튼5클릭
+		    const hideButton5 = document.getElementById("button5");
+		    hideButton5.addEventListener("click", function () {
+		        const img = document.createElement("img");
+		        img.src = "https://i.kym-cdn.com/photos/images/original/001/297/269/744.gif";
+		        img.alt = "img";
+		        imageContainer.innerHTML = ""; 
+		        imageContainer.appendChild(img);
+		        img.style.marginLeft="90px";
+		        img.style.marginTop="-30px";
+		        img.style.width="350px";
+		    });
+		    //버튼6클릭
+		    const hideButton6 = document.getElementById("button6");
+		    hideButton6.addEventListener("click", function () {
+		        const img = document.createElement("img");
+		        img.src = "https://metro.co.uk/wp-content/uploads/2018/02/cheerleaders.gif?quality=90&strip=all&zoom=1&resize=480%2C270";
+		        img.alt = "img";
+		        imageContainer.innerHTML = ""; 
+		        imageContainer.appendChild(img);
+		        img.style.marginLeft="-10px";
+		        img.style.marginTop="0px";
+		        img.style.width="600px";
+		    });
+		});
+		
+		//vpn
+
+		const vpnImage = document.getElementById('vpn');
+
+		let rotationAngle = 0;
+		let x = 0;
+		let y = 0;
+		let speedX = 4; 
+		let speedY = 4; 
+		let rotationSpeed = 3; 
+
+		function animate() {
+
+		    x += speedX;
+		    y += speedY;
+		    
+
+		    rotationAngle += rotationSpeed;
+		    
+
+		    vpnImage.style.transform = `translate(${x}px, ${y}px) rotate(${rotationAngle}deg)`;
+		    
+
+		    const windowWidth = window.innerWidth;
+		    const windowHeight = window.innerHeight;
+		    
+		    if (x > windowWidth || x < -vpnImage.width) {
+		        speedX = -speedX;
+		    }
+		    if (y > windowHeight || y < -vpnImage.height) {
+		        speedY = -speedY;
+		    }
+		    
+
+		    requestAnimationFrame(animate);
+		}
+
+		animate();
+		
+	</script>
+	
+</body>
+</html>
